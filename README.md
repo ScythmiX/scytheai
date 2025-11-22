@@ -46,7 +46,7 @@ The project reflects real-world frontend workflows: a separate rendering layer, 
 4. Visit the provided local URL to view the project.
 
 
-To build for deployment:
+- To build for deployment:
 `npm run build`
 
 ---
