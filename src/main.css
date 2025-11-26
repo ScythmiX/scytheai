@@ -20,8 +20,8 @@
 }
 
 @layer base {
-	#root {
-		@apply font-poppins scroll-smooth overflow-y-auto overflow-x-hidden h-dvh border border-border text-white ;
+	html, body {
+		@apply font-poppins scroll-smooth overflow-y-auto overflow-x-hidden h-full border border-border text-white ;
 	}
 
 	.app {
