@@ -2,35 +2,26 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./main.css";
 
-async function initEruda() {
+(async function initEruda() {
 	if (import.meta.env.DEV) {
 		const eruda = await import("eruda");
 		eruda.init();
 	}
-}
 
-async function mountApp() {
 	try {
-		const App = (await import("./App.jsx")).default;
+		const { default: App } = await import("./App.jsx");
 		createRoot(document.getElementById("root")).render(
 			<StrictMode>
 				<App />
 			</StrictMode>,
 		);
-	} catch (e) {
-		console.error("App failed to load:", e);
+	} catch (err) {
+		console.error("Error importing App.jsx:", err);
 	}
-}
-
-async function loadCanvas() {
+	
 	try {
-		const canvasLoader = import.meta.glob("./canvas.js")["./canvas.js"];
-		if (canvasLoader) await canvasLoader();
-	} catch (e) {
-		console.error("Canvas failed to load:", e);
+		await import("./canvas.js");
+	} catch (err) {
+		console.error("Error importing canvas.js:", err);
 	}
-}
-
-await initEruda();
-await mountApp();
-await loadCanvas();
+})();

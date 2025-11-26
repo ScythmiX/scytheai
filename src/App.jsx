@@ -2,7 +2,7 @@ import { Header, Main, Footer } from "./components";
 
 const App = () => {
 	return (
-		<div className="app bg-bg/20">
+		<div className="app">
 			<Header />
 			<Main />
 			<Footer />

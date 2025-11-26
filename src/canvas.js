@@ -53,7 +53,7 @@ dirLight.position.set(0, 0, 1);
 scene.add(dirLight);
 
 // Scroll functionality
-const app = document.querySelector(".app");
+const app = document.querySelector("#root");
 let scrollPercent = 0;
 let maxScrollY = app.scrollHeight - app.clientHeight;
 

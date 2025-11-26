@@ -20,13 +20,12 @@
 }
 
 @layer base {
-	html,
-	body {
-		@apply relative font-poppins bg-bg -z-10;
+	#root {
+		@apply font-poppins scroll-smooth overflow-y-auto overflow-x-hidden h-dvh border border-border text-white ;
 	}
 
 	.app {
-		@apply scroll-smooth overflow-y-auto overflow-x-hidden max-h-dvh border border-border text-white;
+		@apply bg-bg/20;
 	}
 
 	header {
