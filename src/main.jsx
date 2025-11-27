@@ -18,10 +18,4 @@ import "./main.css";
 	} catch (err) {
 		console.error("Error importing App.jsx:", err);
 	}
-	
-	try {
-		await import("./canvas.js");
-	} catch (err) {
-		console.error("Error importing canvas.js:", err);
-	}
 })();

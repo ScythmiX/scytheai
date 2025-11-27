@@ -21,11 +21,11 @@
 
 @layer base {
 	html, body {
-		@apply font-poppins scroll-smooth overflow-y-auto overflow-x-hidden h-full border border-border text-white relative -z-10 bg-bg;
+		@apply relative -z-10 bg-bg;
 	}
 
 	.app {
-		@apply bg-bg/20;
+		@apply font-poppins scroll-smooth overflow-y-auto overflow-x-hidden h-dvh border border-border text-white bg-bg/20;
 	}
 
 	header {
